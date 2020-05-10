@@ -41,6 +41,7 @@ class CreateTaskPage extends Component {
       routerStore.push('/tasks');
     } catch (error) {
       const errorMessage = error.response.data.message;
+      alert("errorMessage => "+ errorMessage);
       this.setState({ errorMessage });
     }
   };

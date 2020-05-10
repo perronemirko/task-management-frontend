@@ -40,6 +40,7 @@ class SignUpPage extends Component {
       await this.props.userStore.signup(username, password);
       this.props.routerStore.push('/signin');
     } catch (error) {
+      alert("errorMessage => "+ error);
       const errorMessage = error.response.data.message;
       this.setState({ errorMessage });
     }

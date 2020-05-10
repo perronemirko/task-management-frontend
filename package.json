@@ -22,6 +22,8 @@
   },
   "scripts": {
     "start": "PORT=3001 react-app-rewired start",
+    "start:devssl": "PORT=3001 HTTPS=true SSL_CRT_FILE=src/ssl/test.crt SSL_KEY_FILE=src/ssl/test.key react-app-rewired start",
+    "start:prod": "PORT=3001 HTTPS=true SSL_CRT_FILE=src/ssl/certificate.crt SSL_KEY_FILE=src/ssl/private.key react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
